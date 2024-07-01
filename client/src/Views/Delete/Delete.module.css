@@ -1,0 +1,78 @@
+.deleteActivityContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2016/02/07/19/50/mountaineer-1185474_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+  }
+  
+  .homeLink {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+  }
+  
+  .homeButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .homeButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .contentList {
+    width: 70%; 
+    max-width: 800px; 
+    padding: 20px;
+    background-color: rgba(240, 240, 240, 0.589); 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contentList h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .contentList ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contentList li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px;
+    background-color: white; 
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .activityName {
+    flex: 1; 
+  }
+  
+  .deleteButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .deleteButton:hover {
+    background-color: #c82333;
+  }

@@ -1,0 +1,38 @@
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: rgb(237, 237, 202);
+}
+
+
+.cardsContainer > div {
+  flex: 1 1 calc(33.333% - 32px);
+  box-sizing: border-box;
+  max-width: calc(33.333% - 32px);
+}
+
+@media (max-width: 1024px) {
+  .cardsContainer > div {
+    flex: 1 1 calc(50% - 32px);
+    max-width: calc(50% - 32px);
+  }
+}
+
+@media (max-width: 768px) {
+  .cardsContainer > div {
+    flex: 1 1 calc(100% - 32px);
+    max-width: calc(100% - 32px);
+  }
+}
+
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+}

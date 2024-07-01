@@ -1,0 +1,44 @@
+.landingContainer {
+    background-image: url('https://cdn.pixabay.com/photo/2012/01/09/09/59/earth-11595_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: cursive;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .homeButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .homeButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  .homeButton:focus {
+    outline: none;
+  }
+  

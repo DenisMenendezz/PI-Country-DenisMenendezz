@@ -1,0 +1,58 @@
+.detailContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://cdn.pixabay.com/photo/2018/02/27/18/17/road-3186188_1280.jpg');
+    background-size: cover;
+    padding: 20px;
+  }
+  
+  .homeButtonContainer {
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .homeButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .homeButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  .countryDetail {
+    text-align: center;
+    background-color: #fffbfba5;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .countryDetail img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .countryDetail h2, .countryDetail h3 {
+    margin: 10px 0;
+  }
+  
+  .countryDetail h3 {
+    color: #555555;
+  }

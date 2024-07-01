@@ -1,0 +1,121 @@
+
+.pageContainer {
+  background-image: url('https://cdn.pixabay.com/photo/2016/02/07/19/50/mountaineer-1185474_1280.jpg');
+  background-size: cover; 
+  background-position: center; 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #f0f0f050;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.homeLink {
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.homeButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.homeButton:hover {
+  background-color: #0056b3;
+}
+
+.formContCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.activitiesList {
+  margin-bottom: 20px;
+}
+
+.activitiesList h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.formGroup label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.formGroup select,
+.formGroup input[type='text'],
+.formGroup input[type='number'] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.formGroup select {
+  width: 100%;
+  max-width: 200px;
+}
+
+.formGroup button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.formGroup button:hover {
+  background-color: #c82333;
+}
+
+.formError {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.formButton {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+
