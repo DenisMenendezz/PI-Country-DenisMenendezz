@@ -43,6 +43,7 @@ const Create = () => {
     if (name === "duration") {
       if (newState.duration > 24) newErrors.duration = "The activity cannot last more than 24 hours";
       else if(newState.duration < 0) newErrors.duration = "You cannot enter negative numbers";
+      else if(!newState.duration) newErrors.duration = "You must enter a duration in hours!";
       else newErrors.duration = "";
     }
 
@@ -111,22 +112,38 @@ const Create = () => {
   };
 
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(postActivity(state)).then(() => {
-      setState({
-        name: '',
-        difficulty: 1,
-        duration: 1,
-        season: 'Summer',
-        countries: [],
-      });
-      dispatch(getActivities());
-      dispatch(getCountries());
+  const resetForm = () => {
+    const resetState = {
+      name: '',
+      difficulty: 1,
+      duration: 1,
+      season: 'Summer',
+      countries: [],
+    };
+    setState(resetState);
+    setErrors({
+      name: "name is required",
+      duration: "",
+      countries: "You must add at least 1 country",
     });
+    dispatch(getActivities());
+    dispatch(getCountries());
   };
 
-  
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(postActivity(state))
+      .then(() => {
+        resetForm();
+      })
+      .catch(() => {
+        resetForm();
+      });
+  };
+
+
 
   return (
     <div className={styles.pageContainer}>
@@ -162,13 +179,13 @@ const Create = () => {
 
           <div className={styles.formGroup}>
           <label>Name: </label>
-          <input onChange={handleChange} name='name' type='text'/>
+          <input value={state.name} onChange={handleChange} name='name' type='text'/>
           <label className={styles.formError}>{errors.name}</label>
           </div>
 
           <div className={styles.formGroup}>
           <label>Difficulty: </label>
-          <select onChange={handleChange} name='difficulty'>
+          <select value={state.difficulty} onChange={handleChange} name='difficulty'>
             <option value={1}>1</option>
             <option value={2}>2</option>
             <option value={3}>3</option>
@@ -180,14 +197,14 @@ const Create = () => {
           <div className={styles.formGroup}>
 
           <label>Duration(hrs):</label>
-          <input onChange={handleChange} name='duration' defaultValue={1} min="1" type='number'/>
+          <input value={state.duration} onChange={handleChange} name='duration' min="1" type='number'/>
           <label className={styles.formError}>{errors.duration}</label>
 
           </div>
 
           <div className={styles.formGroup}>
           <label>Season: </label>
-          <select onChange={handleChange} name='season'>
+          <select value={state.season} onChange={handleChange} name='season'>
           <option value={"Summer"}>Summer</option>
           <option value={"Autumn"}>Autumn</option>
           <option value={"Winter"}>Winter</option>

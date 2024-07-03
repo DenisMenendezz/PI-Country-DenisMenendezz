@@ -22,7 +22,7 @@ const postActivity = async (req, res) => {
         ) {
             res.status(409).send(error.message);
         } else {
-            res.status(500).send(error);
+            res.status(500).send(error.message);
         }
     }
 };
@@ -52,3 +52,4 @@ module.exports = {
     getActivities,
     deleteActivity,
 };
+

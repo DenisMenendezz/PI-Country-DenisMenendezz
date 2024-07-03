@@ -1,6 +1,6 @@
 import React from 'react'
 import Cards from '../../Components/Cards/Cards'
-import { filterByContinent, getActivities, filterByActivity, sortCountries, setSortBy } from '../../Redux/Actions/actions';
+import { filterByContinent, getActivities, filterByActivity, sortCountries, setSortBy, getCountries } from '../../Redux/Actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
@@ -12,11 +12,13 @@ const Home = () => {
 
   const dispatch = useDispatch();
   const allActivities = useSelector(state => state.allActivities);
+  
 
 
 
   useEffect(() => {
     dispatch(getActivities());
+    dispatch(getCountries())
   }, [dispatch]);
 
 
